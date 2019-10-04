@@ -15,7 +15,7 @@ import { useReduceMotion } from 'react-reduce-motion';
 
 ## Why?
 
-Building animations in React are fun! Especially if you're using a library like [react-spring](https://react-spring.io). But, they're not fun for everyone. 
+Building animations in React are fun! Especially if you're using a library like [react-spring](https://react-spring.io). I recently had some fun [messing around with react-spring](https://lukeherrington.com/posts/springtime-in-react-town/) and learned that animations are not fun for everyone.
 
 Vestibular dysfunction, a balance disorder of the inner ear, is surprisingly common among US adults. [A study](https://www.ncbi.nlm.nih.gov/pubmed/19468085) from the early 2000's found that approximately 69 million Americans had vestibular dysfunction which results in vertigo, nausea, migraines and hearing loss. Many people affected by vestibular dysfunction will choose to set the "Reduce motion" setting in their OS. In macOS it's found in the accessibility settings.
 
