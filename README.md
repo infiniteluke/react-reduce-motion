@@ -49,7 +49,7 @@ function ParallaxAnimatedButton({ rotation = 10, scale = 1.2 }) {
   const buttonRef = React.useRef();
   const reduceMotion = useReduceMotion();
   const defaultTransform = [0, 0, 1]
-  // This is where we choose the animation intensity depening on user preference.
+  // This is where we choose the animation intensity depending on user preference.
   const actualRotation = reduceMotion ? rotation / 3 : rotation;
   const actualScale = reduceMotion ? 1.01 : scale;
   const [props, set] = useSpring(() => ({
@@ -101,7 +101,7 @@ The native version depends on React Native's [AccessibilityInfo API](https://fac
 
 ## Inspiration
 
-Writing a blog post about my experience learning `react-spring` helped me realize a dedicated pacakge was needed for this purpose. [Read it here](https://lukeherrington.com/posts/springtime-in-react-town/) and you'll learn how I implemented it. [A conversation with Paul, the creator of react-spring](https://github.com/react-spring/react-spring/issues/811) spurred me to contribute this work. 
+Writing a blog post about my experience learning `react-spring` helped me realize a dedicated package was needed for this purpose. [Read it here](https://lukeherrington.com/posts/springtime-in-react-town/) and you'll learn how I implemented it. [A conversation with Paul, the creator of react-spring](https://github.com/react-spring/react-spring/issues/811) spurred me to contribute this work. 
 
 ## Resources
 
