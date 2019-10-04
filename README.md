@@ -74,9 +74,11 @@ function ParallaxAnimatedButton({ rotation = 10, scale = 1.2 }) {
 ```
 
 Before:
+
 ![A very intensely animated button](https://user-images.githubusercontent.com/1127238/66233346-fa988980-e69f-11e9-89af-e7db47549293.gif)
 
 After:
+
 ![A subtly animated button](https://user-images.githubusercontent.com/1127238/66233366-071ce200-e6a0-11e9-87f6-42b850e18a6e.gif)
 
 ```js
