@@ -1,0 +1,7 @@
+{
+  "name": "react-reduce-motion/native",
+  "private": true,
+  "main": "./dist/react-reduce-motion.native.cjs.js",
+  "jsnext:main": "./dist/react-reduce-motion.native.esm.js",
+  "module": "./dist/react-reduce-motion.native.esm.js"
+}
