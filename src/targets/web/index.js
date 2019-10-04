@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 /* Warning if you've imported this file on React Native */
 if (
@@ -27,4 +27,4 @@ export function useReduceMotion() {
     };
   }, []);
   return matches;
-};
+}

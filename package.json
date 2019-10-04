@@ -32,6 +32,12 @@
   },
   "devDependencies": {
     "bundlesize": "^0.18.0",
+    "eslint": "^6.5.1",
+    "eslint-config-problems": "^3.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
+    "prettier": "1.18.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-native": "^0.60",
@@ -49,5 +55,21 @@
       "path": "./dist/react-reduce-motion.min.js",
       "maxSize": "500b"
     }
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  }
 }

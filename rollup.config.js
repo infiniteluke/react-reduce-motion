@@ -6,8 +6,6 @@ const json = require('rollup-plugin-json');
 const { terser } = require('rollup-plugin-terser');
 const sourceMaps = require('rollup-plugin-sourcemaps');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 const globals = { react: 'React', 'react-native': 'ReactNative' };
 
 const cjs = {
@@ -34,7 +32,7 @@ const commonPlugins = [
     namedExports: {
       'react-is': ['isElement', 'isValidElementType', 'ForwardRef'],
     },
-  })
+  }),
 ];
 
 const standaloneBaseConfig = {
@@ -68,7 +66,6 @@ const prodPlugins = [
   }),
 ];
 
-
 const standaloneProdConfig = {
   ...standaloneBaseConfig,
   output: {
@@ -101,7 +98,6 @@ const nativeConfig = {
   external: Object.keys(globals),
   plugins: commonPlugins,
 };
-
 
 export default [
   standaloneConfig,
