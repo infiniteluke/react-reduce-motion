@@ -14,7 +14,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "size": "bundlesize"
+    "size": "bundlesize",
+    "prepublishOnly": "yarn build"
   },
   "keywords": [
     "react",
