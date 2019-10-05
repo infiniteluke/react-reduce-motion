@@ -15,15 +15,16 @@ if (
 
 export function useReduceMotion() {
   const [matches, setMatch] = React.useState(false);
+  const mediaQuery = React.useRef();
   React.useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduce-motion: reduce)');
-    setMatch(mediaQuery.matches);
+    mediaQuery.current = window.matchMedia('(prefers-reduce-motion: reduce)');
     const handleChange = () => {
-      setMatch(mediaQuery.matches);
+      setMatch(mediaQuery.current.matches);
     };
-    mediaQuery.addEventListener('change', handleChange);
+    handleChange();
+    mediaQuery.current.addEventListener('change', handleChange);
     return () => {
-      mediaQuery.removeEventListener('change', handleChange);
+      mediaQuery.current.removeEventListener('change', handleChange);
     };
   }, []);
   return matches;
