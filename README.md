@@ -59,6 +59,7 @@ function ParallaxAnimatedButton({ rotation = 10, scale = 1.2 }) {
   return (
     <animated.button
       ref={buttonRef}
+      className="springy-button"
       onMouseMove={({ clientX, clientY }) =>
         set({ xys: calc(actualRotation, actualScale, clientX, clientY, buttonRef.current) })
       }
@@ -86,6 +87,8 @@ After:
 ```
 
 The above snippet is where the heuristic is applied. Depending on what you're animating, you need to make your own decision. See the [Resources](#Resources) section below as your guide.
+
+✨ [Interactive example](https://react-reduce-motion.netlify.com) ✨
 
 ## Native
 
