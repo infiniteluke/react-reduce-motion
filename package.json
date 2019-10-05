@@ -32,11 +32,8 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
     "@testing-library/react-hooks": "^2.0.3",
     "babel-jest": "^24.9.0",
-    "babel-preset-react-app": "^9.0.2",
     "bundlesize": "^0.18.0",
     "eslint": "^6.5.1",
     "eslint-config-problems": "^3.0.1",
@@ -51,7 +48,6 @@
     "react-native": "^0.60",
     "react-test-renderer": "^16.10.2",
     "rollup": "^1.23.0",
-    "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -68,7 +64,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": " yarn bundlesize && yarn test"
+      "pre-push": "yarn build && yarn bundlesize && yarn test"
     }
   },
   "lint-staged": {

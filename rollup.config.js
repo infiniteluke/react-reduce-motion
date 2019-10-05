@@ -1,7 +1,6 @@
 const nodeResolve = require('rollup-plugin-node-resolve');
 const replace = require('rollup-plugin-replace');
 const commonjs = require('rollup-plugin-commonjs');
-const babel = require('rollup-plugin-babel');
 const json = require('rollup-plugin-json');
 const { terser } = require('rollup-plugin-terser');
 const sourceMaps = require('rollup-plugin-sourcemaps');
@@ -25,9 +24,6 @@ const commonPlugins = [
   sourceMaps(),
   json(),
   nodeResolve(),
-  babel({
-    exclude: ['node_modules/**', '../../node_modules/**'],
-  }),
   commonjs({
     namedExports: {
       'react-is': ['isElement', 'isValidElementType', 'ForwardRef'],
