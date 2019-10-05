@@ -15,7 +15,8 @@
     "build": "rollup -c",
     "test": "jest",
     "size": "bundlesize",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "release": "np"
   },
   "keywords": [
     "react",
@@ -43,6 +44,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.4.1",
     "metro-react-native-babel-preset": "^0.56.0",
+    "np": "^5.1.0",
     "prettier": "1.18.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
