@@ -1,7 +1,7 @@
 # React Reduce Motion ➰
 
 ## Installation and Usage
-React Reduce Motion requires react `^16.8.0` or for native, requires react-native `^0.60`
+React Reduce Motion requires react `^16.8.0` or for native, requires react-native `^0.60`.
 
 ```sh
 yarn add react-reduce-motion
@@ -93,6 +93,8 @@ The above snippet is where the heuristic is applied. Depending on what you're an
 ## Native
 
 To use React Reduce Motion with React Native, import the `native` build use the hook as demonstrated above.
+
+> ❗The native react hook provided by React Reduce Motion requires react-native <code>^0.60</code>.
 
 ```js
 import { useReduceMotion } from 'react-reduce-motion/native';
