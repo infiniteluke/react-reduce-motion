@@ -12,7 +12,7 @@ import { useReduceMotion } from './';
 
 test('returns true if "Reduce motion" is enabled', async () => {
   AccessibilityInfo.isReduceMotionEnabled.mockResolvedValue(true);
-  const { result, waitForNextUpdate } = renderHook(() => useReduceMotion());
+  const { result, waitForNextUpdate } = renderHook(useReduceMotion);
   expect(result.current).toBe(false);
   await waitForNextUpdate();
   expect(result.current).toBe(true);
@@ -20,6 +20,6 @@ test('returns true if "Reduce motion" is enabled', async () => {
 
 test('returns false if "Reduce motion" is disabled', async () => {
   AccessibilityInfo.isReduceMotionEnabled.mockResolvedValue(false);
-  const { result } = renderHook(() => useReduceMotion());
+  const { result } = renderHook(useReduceMotion);
   expect(result.current).toBe(false);
 });
