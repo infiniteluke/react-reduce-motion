@@ -15,7 +15,7 @@ if (
 
 export function useReduceMotion() {
   const [matches, setMatch] = React.useState(
-    window.matchMedia('(prefers-reduced-motion: reduce)')
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
   );
   React.useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
