@@ -1,6 +1,6 @@
 {
   "name": "react-reduce-motion",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A cross platform react hook that indicates whether a user's OS is configured to \"Reduce motion\" for accessibility purposes",
   "main": "dist/react-reduce-motion.browser.cjs.js",
   "jsnext:main": "dist/react-reduce-motion.esm.js",
