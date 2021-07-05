@@ -24,21 +24,21 @@ export function useReduceMotion() {
     };
     handleChange();
     // If only has depreciated api use that, otherwise use current api
-		// Safari 14 + has both, Safari <= 13 only has depreciated
-		// fixes https://github.com/infiniteluke/react-reduce-motion/issues/8
+    // Safari 14 + has both, Safari <= 13 only has depreciated
+    // fixes https://github.com/infiniteluke/react-reduce-motion/issues/8
     const usesDepreciatedApi = mq.addListener && !mq.addEventListener;
-		if (usesDepreciatedApi) {
-			mq.addListener(handleChange);
-		} else {
-			mq.addEventListener('change', handleChange);
-		}
-		return () => {
-			if (usesDepreciatedApi) {
-				mq.removeListener(handleChange);
-			} else {
-				mq.addEventListener('change', handleChange);
-			}
-		};
-	}, []);
+    if (usesDepreciatedApi) {
+      mq.addListener(handleChange);
+    } else {
+      mq.addEventListener('change', handleChange);
+    }
+    return () => {
+      if (usesDepreciatedApi) {
+        mq.removeListener(handleChange);
+      } else {
+        mq.addEventListener('change', handleChange);
+      }
+    };
+  }, []);
   return matches;
 }
