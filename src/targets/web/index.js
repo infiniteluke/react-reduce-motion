@@ -36,7 +36,7 @@ export function useReduceMotion() {
       if (usesDepreciatedApi) {
         mq.removeListener(handleChange);
       } else {
-        mq.addEventListener('change', handleChange);
+        mq.removeEventListener('change', handleChange);
       }
     };
   }, []);
